@@ -49,15 +49,23 @@ func1 = lambda x : x%2==0
 rs1 = list(filter(func1, ls1))
 print(rs1)
 
+"""
+filter(example2)
+"""
+
 # 3의 배수만 반환
 ls2 = range(0, 11)
 func2 = lambda x : x%3==0
 rs2 = list(filter(func2, ls2))
 print(rs2)
 
+"""
+filter(example3)
+"""
+
 # 1~10사이의 수를 제곱하여 3의 배수만 반환
 ls3 = range(0, 11)
-func3_1 = lambda x : pow(x, 2)
-func3_2 = lambda x : x%3==0
+func3_1 = lambda x : pow(x, 2) # 제곱
+func3_2 = lambda x : x%3==0 # 3의 배수만 반환
 rs3 = list(filter(func3_2, map(func3_1, ls3)))
 print(rs3)
