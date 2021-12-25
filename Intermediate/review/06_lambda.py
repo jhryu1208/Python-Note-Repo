@@ -32,3 +32,15 @@ print(type(outfunc))
 print(outfunc(4)) # 4**2
 
 # ================================================ #
+
+"""
+lambda
+"""
+
+arg0 = lambda : print('hello')
+arg1 = lambda x : print(x)
+arg2 = lambda x, y : print(x, y)
+
+arg0()
+arg1(5)
+arg2(5, 10)
