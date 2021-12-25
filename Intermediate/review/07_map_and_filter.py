@@ -69,3 +69,9 @@ func3_1 = lambda x : pow(x, 2) # 제곱
 func3_2 = lambda x : x%3==0 # 3의 배수만 반환
 rs3 = list(filter(func3_2, map(func3_1, ls3)))
 print(rs3)
+
+# 하지만 위의 예제의 경우
+# list comprehension을 사용하는 것이 더 간결하다.
+# map과 filter가 동시에 사용되는 케이스에서는 list comprehension을 선호하도록 하자.
+rs4 = [pow(i, 2) for i in ls3 if i%3==0]
+print(rs4)
