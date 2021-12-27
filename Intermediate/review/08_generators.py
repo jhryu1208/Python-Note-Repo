@@ -108,7 +108,30 @@ while True:
         print('StopIteration raised')
         break
 
+print('\n')
+
+"""
+generator expression
 """
 
+def gen_func():
+    for i in [1, 2, 3]:
+        yield i
+
+gen_func_obj = gen_func()
+print(type(gen_func_obj))
+
+gen_exp_obj = (i for i in[1, 2, 3])
+print(type(gen_exp_obj))
+
+print('\n')
 
 """
+function
+"""
+def func(x):
+    for i in x:
+        print(i, end = ' ')
+
+func((i for i in[1, 2, 3]))
+func(i for i in[1, 2, 3])
