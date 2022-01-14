@@ -25,7 +25,7 @@ for num, name in enumerate(names_asc, 10):
 print(stud_dict)
 
 """
-enumerate ex2 : use lambda
+enumerate ex2 : use dict comprehension
 """
 
 stud_dict = { num : name for num,  name in enumerate(sorted(names), 100)}
