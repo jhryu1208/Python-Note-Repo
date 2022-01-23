@@ -99,7 +99,7 @@ if __name__ == '__main__':
     SOURCE_BUCKET_NAME = 'hello_test_bucket_1208'
     TARGET_FILE_NAME = 'tottenham.csv'
     DOWNLOAD_PATH = os.getcwd()+'/gcp/test_file/'
-    GCS_FILE_URI = 'gs://hello_test_bucket_1208/tottenham.csv'
+    GCS_FILE_URI = f'gs://{SOURCE_BUCKET_NAME}/{TARGET_FILE_NAME}'
     storage_client = storage.Client()
 
     b = download_blobs(storage_client, SOURCE_BUCKET_NAME)
