@@ -14,6 +14,7 @@ class upload_blob:
 
         bucket = storage_client.bucket(bucket_name)
         blob = bucket.blob(destination_blob_name)
+        # upload contents of this blob from the provided string
         blob.upload_from_string(source_file_name, content_type = c_type)
 
         print(f'File {blob.name} uploaded to {bucket.name}')
