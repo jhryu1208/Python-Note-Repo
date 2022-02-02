@@ -1,0 +1,40 @@
+{
+  "player":
+  [
+    {
+        "name":"Pierre-Emile Höjbjerg",
+        "age":26,
+        "height":185,
+        "place_of_bith":"Khagen",
+        "main_position":"Central Midfield"
+    },
+    {
+        "name":"Tanguy Ndombélé",
+        "age":25,
+        "height":181,
+        "place_of_bith":"Longjumeau",
+        "main_position":"Central Midfield"
+    },
+    {
+        "name":"Cristian Romero",
+        "age":23,
+        "height":185,
+        "place_of_bith":"Córdoba",
+        "main_position":"Centre-Back"
+    },
+    {
+        "name":"Heung-min Son",
+        "age":28,
+        "height":184,
+        "place_of_bith":"Korea, South",
+        "main_position":"Left Winger"
+    },
+    {
+        "name":"Davinson Sánchez",
+        "age":25,
+        "height":187,
+        "place_of_bith":"Colombia",
+        "main_position":"Centre-Back"
+    }
+  ]
+}
