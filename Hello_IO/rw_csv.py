@@ -54,13 +54,29 @@ df.reset_index(inplace=True)
 df.columns = ['id', 'device_id', 'device_name']
 df.to_csv('iphone3.csv', index=False)
 
+"""
+방법4 : StringIO (3) 
+"""
+str_contents = str(contents, 'utf-8')
+body = StringIO(str_contents)
+rows = [row.replace('\n', '').split(' : ') for row in body if row != '\n']
+rows = [[id]+row for id, row in enumerate(rows)]
+
+with open('iphone4.csv', 'w', newline='\n') as f:
+    writer = csv.writer(f, delimiter=',', quotechar='"')
+    writer.writerow(['id', 'device_id', 'device_name']) # header
+    writer.writerows(rows)
+    #result = target_body.getvalue()  S3에서 put_objects(temp파일 남기지 않고 추가하는 케이스) 이용시 유용
+
 
 """
-방법4 : BytesIO
+방법5 : BytesIO (StringIO 방법도 포함임)
 """
 
 bytes = BytesIO(contents) # work with byte data
 df = pd.read_csv(bytes, sep=' : ', engine='python', header=None)
 df.reset_index(inplace=True)
 df.columns = ['id', 'device_id', 'device_name']
-df.to_csv('iphone4.csv', index=False)
+df.to_csv('iphone5.csv', index=False)
+
+
